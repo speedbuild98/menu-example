@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+      <!--MetaTags-->
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--Fonts-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet">
+      <!--Icons-->
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+      <!--TailwindCSS-->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+            tailwind.config = {
+                  theme: {
+                        extend: {
+                              colors: {
+                                    azul: '#252D88',
+                                    azulclaro: '#4562EA',
+                                    celeste: '#1f88e9',
+                                    verde: '#21A35B',
+                              }
+                        }
+                  }
+            }
+      </script>
+      <!--Title-->
+      <title>Document</title>
+</head>
+
+<body
+      style="font-family: 'Roboto', sans-serif; background-image: url(img/cool-background.png); background-repeat: no-repeat;">
+      <!--=============NAV=============-->
+      <nav class="bg-azul w-screen py-3 flex justify-center  shadow-md shadow-white">
+            <img src="https://dlocal.com/wp-content/uploads/2018/01/logo-new_x2.png" alt="logo dlocal" class="w-40">
+            <div class="flex align-middle">
+                  <i onclick="openMenu()"
+                        class="uil uil-align-center-alt text-white my-auto ml-2 text-3xl hover:text-azulclaro animate-pulse"></i>
+            </div>
+      </nav>
+      <!--=============MENU=============-->
+      <div id="menuContainer"
+            class="bg-azulclaro w-screen h-[0px] ease-out duration-300 rounded-b-[40px] flex shadow-md shadow-white">
+            <div id="menu" class="hidden flex-col mx-auto">
+                  <div class="">
+                        <span onclick="closeMenu()" class="text-[40px] font-medium text-white hover:text-azul ml-2">×</span>
+                  <ul class="flex flex-row justify-around">
+                        <li class="text-white flex flex-col w-[100px] text-center cursor-pointer hover:text-azul"><i class="text-azul text-2xl font-bold uil uil-home"></i>Home</li>
+                        <li class="text-white flex flex-col w-[100px] text-center cursor-pointer hover:text-azul"><i class="text-azul text-2xl font-bold uil uil-money-insert"></i>dLocal Go</li>
+                        <li class="text-white flex flex-col w-[100px] text-center cursor-pointer hover:text-azul"><i class="text-azul text-2xl font-bold uil uil-brackets-curly"></i>Solutions</li>
+                  </ul>
+                  <ul class="flex flex-row justify-around mb-2">
+                        <li class="text-white flex flex-col w-[100px] text-center cursor-pointer hover:text-azul"><i class="text-azul text-2xl font-bold uil uil-bill"></i>Coverage</li>
+                        <li class="text-white flex flex-col w-[100px] text-center cursor-pointer hover:text-azul"><i class="text-azul text-2xl font-bold uil uil-users-alt"></i>Customers</li>
+                        <li class="text-white flex flex-col w-[100px] text-center cursor-pointer hover:text-azul"><i class="text-azul text-2xl font-bold uil uil-building"></i>Company</li>
+                  </ul>
+                  </div>
+                  <button class="bg-verde text-white font-bold my-2 py-1 rounded-lg w-40 mx-auto">Contact sales</button>
+            </div>
+      </div>
+      <!--=============LOG IN=============-->
+      <main class="flex flex-col rounded-2xl bg-white justify-center my-10 w-4/5 mx-auto px-5 py-2">
+            <span class="text-center font-medium text-sky-400 my-2">Welcome to the Merchant Dashboard</span>
+            <h1 class="text-stone-600 text-center text-3xl font-bold my-5">Login</h1>
+            <form>
+                  <div class="border-b-2 mb-4">
+                        <label for="fname" class="font-semibold text-stone-500">Username</label><br>
+                        <i class="uil uil-user"></i>
+                        <input class="font-light" placeholder="Type your username" type="text" id="fname"
+                              name="fname"><br>
+                  </div>
+                  <div class="border-b-2 mb-2">
+                        <label for="lname" class="font-semibold text-stone-500">Password:</label><br>
+                        <i class="uil uil-lock"></i>
+                        <input class="font-light" placeholder="Type your password" type="password" id="lname"
+                              name="lname">
+                  </div>
+                  <p class="font-medium text-xs text-stone-400 float-right hover:text-stone-600 mb-7 cursor-pointer">
+                        Forgot password?</p>
+            </form>
+            <button class="bg-celeste font-medium text-white rounded-2xl py-1 mb-4 hover:bg-azulclaro">LOGIN</button>
+            <p class="text-center text-stone-400 font-medium text-xs mb-4">Or Sign up using</p>
+            <div class="flex flex-row justify-center mb-3">
+                  <i
+                        class="px-1 mx-2 border rounded-lg text-2xl uil uil-apple-alt text-celeste align-middle hover:text-azul"></i>
+                  <i
+                        class="px-1 mx-2 border rounded-lg text-2xl uil uil-linkedin-alt text-celeste align-middle hover:text-azul"></i>
+                  <i class="px-1 mx-2 border rounded-lg text-2xl uil uil-paypal text-celeste hover:text-azul"></i>
+            </div>
+            <img src="img/logo-black-new.webp" alt="" class="w-14">
+      </main>
+      <!--=============FOOTER=============-->
+      <footer class="flex flex-col">
+            <div class="flex flex-row mx-auto">
+                  <a href="https://dlocal.com/" class="text-azul px-2 text-xs border-r-2 border-azul">d·local.com</a>
+                  <a href="https://dlocal.com/legal/terms-and-conditions" class="text-azul mx-2 text-xs">Terms and Conditions</a>
+            </div>
+            <p class="text-azul mx-auto text-base font-medium mt-2">© 2022 d·local. All rights reserved</p>
+      </footer>
+      <!--=============SCRIPTS=============-->
+      <script>
+            function openMenu() {
+                  document.getElementById("menuContainer").style.height = "250px";
+                  document.getElementById("menu").style.display = "flex";
+            }
+            function closeMenu() {
+                  document.getElementById("menuContainer").style.height = "0px";
+                  document.getElementById("menu").style.display = "none";
+            }
+      </script>
+</body>
+
+</html>
